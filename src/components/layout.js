@@ -8,7 +8,7 @@ import {
     navLinkText
 } from './layout.module.css'
 
-const Layout = ({ pageTitle, pageHeading, children, navLinkItem, navLinkText }) => {
+const Layout = ({ pageTitle, pageHeading, children }) => {
     return (
         <main className={container}>
             <title>{pageTitle}</title>
