@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import React from 'react'
 import {
     container,
@@ -9,6 +9,20 @@ import {
 } from './layout.module.css'
 
 const Layout = ({ pageTitle, pageHeading, children }) => {
+
+
+    const data = useStaticQuery(graphql`
+       query {
+        site {
+            siteMetadata {
+         title
+            }   
+        }
+     }
+    `);
+
+    console.log(data);
+
     return (
         <main className={container}>
             <title>{pageTitle}</title>
